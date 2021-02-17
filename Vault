@@ -4,3 +4,5 @@ az keyvault create --name "<your-unique-keyvault-name>" -g "myResourceGroup"
 az keyvault secret set --vault-name "<your-unique-keyvault-name>" --name "mySecret" --value "Success!"
 
 az vm identity assign --name <NameOfYourVirtualMachine> --resource-group <YourResourceGroupName>
+
+az keyvault set-policy --name '<your-unique-key-vault-name>' --object-id <VMSystemAssignedIdentity> --secret-permissions get list
