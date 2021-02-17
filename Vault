@@ -10,3 +10,4 @@ az keyvault set-policy --name '<your-unique-key-vault-name>' --object-id <VMSyst
 https://download.visualstudio.microsoft.com/download/pr/d7b8da76-a160-44a1-8038-b4b91404b8f2/af410f6d2e213ef7ee9dfefd853e97c0/dotnet-sdk-3.1.406-linux-x64.tar.gz
 
 dotnet add package Azure.Security.KeyVault.Secrets
+dotnet add package Azure.Identity
