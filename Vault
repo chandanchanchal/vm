@@ -187,3 +187,7 @@ spec:
     --target-dedicated-nodes 2 \
     --image canonical:ubuntuserver:16.04-LTS \
     --node-agent-sku-id "batch.node.ubuntu 16.04"
+    
+    az batch job create \
+    --id myjob \
+    --pool-id mypool
