@@ -200,3 +200,8 @@ do
     --job-id myjob \
     --command-line "/bin/bash -c 'printenv | grep AZ_BATCH; sleep 90s'"
 done
+
+
+az batch task show \
+    --job-id myjob \
+    --task-id mytask1
