@@ -211,3 +211,7 @@ az batch task show \
     --job-id myjob \
     --task-id mytask1 \
     --output table
+    
+    
+    az batch pool show --pool-id mypool \
+    --query "allocationState"
