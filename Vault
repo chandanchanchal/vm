@@ -205,3 +205,9 @@ done
 az batch task show \
     --job-id myjob \
     --task-id mytask1
+    
+    
+    az batch task file list \
+    --job-id myjob \
+    --task-id mytask1 \
+    --output table
