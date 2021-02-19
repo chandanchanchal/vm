@@ -219,3 +219,23 @@ az batch task show \
 
 
 Search online for Microsoft.Azure.Cosmos.Table, Microsoft.Extensions.Configuration, Microsoft.Extensions.Configuration.Json, Microsoft.Extensions.Configuration.Binder and select Install to install the Microsoft Azure Cosmos DB Table Library.
+
+
+namespace CosmosTableSamples
+{
+    using Microsoft.Extensions.Configuration;
+
+    public class AppSettings
+    {
+        public string StorageConnectionString { get; set; }
+
+        public static AppSettings LoadAppSettings()
+        {
+            IConfigurationRoot configRoot = new ConfigurationBuilder()
+                .AddJsonFile("Settings.json")
+                .Build();
+            AppSettings appSettings = configRoot.Get<AppSettings>();
+            return appSettings;
+        }
+    }
+}
