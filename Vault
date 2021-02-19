@@ -215,3 +215,7 @@ az batch task show \
     
     az batch pool show --pool-id mypool \
     --query "allocationState"
+
+
+
+Search online for Microsoft.Azure.Cosmos.Table, Microsoft.Extensions.Configuration, Microsoft.Extensions.Configuration.Json, Microsoft.Extensions.Configuration.Binder and select Install to install the Microsoft Azure Cosmos DB Table Library.
