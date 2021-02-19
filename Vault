@@ -1297,3 +1297,10 @@ namespace CosmosTableSamples
         }
     }
 }
+
+
+public static bool IsAzureCosmosdbTable()
+        {
+            string storageConnectionString = AppSettings.LoadAppSettings().StorageConnectionString;
+            return !String.IsNullOrEmpty(storageConnectionString) && (storageConnectionString.Contains("table.cosmosdb") || storageConnectionString.Contains("table.cosmos"));
+        }
