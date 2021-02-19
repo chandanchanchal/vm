@@ -378,3 +378,29 @@ public static async Task<CustomerEntity> RetrieveEntityUsingPointQueryAsync(Clou
         throw;
     }
 }
+
+public static async Task DeleteEntityAsync(CloudTable table, CustomerEntity deleteEntity)
+{
+    try
+    {
+        if (deleteEntity == null)
+        {
+            throw new ArgumentNullException("deleteEntity");
+        }
+
+        TableOperation deleteOperation = TableOperation.Delete(deleteEntity);
+        TableResult result = await table.ExecuteAsync(deleteOperation);
+
+        if (result.RequestCharge.HasValue)
+        {
+            Console.WriteLine("Request Charge of Delete Operation: " + result.RequestCharge);
+        }
+
+    }
+    catch (StorageException e)
+    {
+        Console.WriteLine(e.Message);
+        Console.ReadLine();
+        throw;
+    }
+}
