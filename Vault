@@ -162,3 +162,10 @@ spec:
   - port: 80
   selector:
     app: azure-vote-front
+    
+    
+    az storage account create \
+    --resource-group QuickstartBatch-rg \
+    --name mystorageaccount \
+    --location eastus2 \
+    --sku Standard_LRS
