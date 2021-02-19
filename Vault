@@ -169,3 +169,10 @@ spec:
     --name mystorageaccount \
     --location eastus2 \
     --sku Standard_LRS
+    
+    
+    az batch account create \
+    --name mybatchaccount \
+    --storage-account mystorageaccount \
+    --resource-group QuickstartBatch-rg \
+    --location eastus2
