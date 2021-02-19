@@ -176,3 +176,8 @@ spec:
     --storage-account mystorageaccount \
     --resource-group QuickstartBatch-rg \
     --location eastus2
+    
+    az batch account login \
+    --name mybatchaccount \
+    --resource-group QuickstartBatch-rg \
+    --shared-key-auth
